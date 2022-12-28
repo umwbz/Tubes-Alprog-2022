@@ -80,15 +80,20 @@ void signup()
 
 	printf("\t\t\t\tEmail : ");
 	scanf("%s", temp_email);
-
+         printf("\n\n\n\t\t\t\t*Please Enter the strong password\n");
+         printf("\t\t\t\tyour password must contain ");
+         printf("atleast one uppercase,\n");
+         printf("\t\t\t\tLowercase, Number and ");
+         printf("special character\n\n");
    printf("\t\t\t\tEnter Password : ");
 	scanf("%s", temp_password1);
-
 	printf("\t\t\t\tConfirm Password :");
 	scanf("%s", temp_password2);
+   printf("\n\n\n\t\t\t\t*hanya Masukkan 12 digit angka no hp\n");
 
-   printf("\t\t\t\tNo Telepon : ");
+   printf("\n\t\t\t\tNo Telepon : ");
 	scanf("%s", temp_mobile);
+
 
 	// memanggil fungsi validasi
 	x = validate();
@@ -110,7 +115,7 @@ int validate()
 		if (!((temp_name[i] >= 'a' && temp_name[i] <= 'z')
 			|| (temp_name[i] >= 'A'
 				&& temp_name[i] <= 'Z'))) {
-			printf("\n\t\t\t\tmasukkan nama anda dengan benar!\n");
+			printf("\n\t\t\t\t*masukkan nama anda dengan benar!\n");
 			flag = 0;
 			break;
 		}
@@ -161,6 +166,7 @@ int validate()
 						&& numbers >= 1 && special >= 1) {
 							// validasi inputan untuk variabel no.telepon
 							if (strlen(temp_mobile) == 12) {
+
 								for (i = 0; i < 12; i++) {
 									if (temp_mobile[i]
 											>= '0'
@@ -450,48 +456,7 @@ awal :
 printf("\t\t\t\t+====================================================+\n");
 printf("\t\t\t\t                 Welcome to MCDonalds                 \n");
 printf("\t\t\t\t               Jl. Kampus Unud JImbaran               \n");
-printf("\t\t\t\t+====================================================+\n");
 printf("\n");
-printf("\t\t\t\tApakah anda Ingin Dine in atau Take away\n\n");
-printf("\t\t\t\t1.Dine in\n");
-printf("\t\t\t\t2.Take Away\n");
-printf("\t\t\t\tMasukan Pilihan : ");
-pilih = validasi(2);
-if (pilih==1) {
-   strcpy(layanan, "Dine In");
-   system("pause");
-   getchar();
-   goto tduduk;
-}
-else if(menu==2) {
-   strcpy(layanan, "take Away");  
-}
-
-tduduk :
-printf("\t\t\t\tPilih meja yang anda Inginkan : ");
-scanf("%s",&meja);
-
-
-paymentm:
-system("cls");
-printf("\t\t\t\t+====================================================+\n");
-printf("\t\t\t\t                 metode pembayaran                    \n");
-printf("\t\t\t\t+====================================================+\n");
-printf("\n");
-printf("\t\t\t\tpilih metode pembayaran yang anda inginkan\n\n");
-printf("\t\t\t\t1.tunai\n");
-printf("\t\t\t\t2.non-tunai\n");
-printf("\t\t\t\tMasukan Pilihan : ");
-payment = validasi(2);
-if (payment==2) {
-   printf("\t\t\t\tMohon Maaf metode Pembayaran Untuk Non-tunai belum Tersedia\n");
-   system("pause");
-   getchar();
-   goto paymentm;
-}
-
-
-system("cls");
 printf("\t\t\t\t+====================================================+\n");
 printf("\t\t\t\t                   Menu McDonald's                    \n");
 printf("\t\t\t\t+====================================================+\n");
