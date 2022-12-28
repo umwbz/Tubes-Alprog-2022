@@ -29,7 +29,7 @@ char read_name[100], read_email[100], read_pass[100];
 
 int main()
 {
-	while (1) {
+	int option ;
       system("color 0b");
       system("pause");
       system("cls");
@@ -62,7 +62,7 @@ int main()
 			printf("\n\t\t\t\tmasukkan pilihan dengan benar!\n");
 			break;
 		}
-		}
+	
 	}
 }
 
